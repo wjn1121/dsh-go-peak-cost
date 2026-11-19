@@ -1,0 +1,70 @@
+{
+  "name": "local-peak-cost",
+  "version": "0.1.0",
+  "description": "DeepSeek 峰谷价与每轮花费（DSH Go 原生）：输入框状态条、峰谷费用面板、回合尾注",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dsh-bundle",
+    "deepseek-harness",
+    "dsh-go",
+    "cost",
+    "peak-pricing"
+  ],
+  "engines": {
+    "node": ">=22.19",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "峰谷费用",
+      "en": "Peak Cost"
+    },
+    "icon": "coin",
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "shift",
+          "icon": "coin",
+          "panel": "peak"
+        }
+      ],
+      "panels": [
+        {
+          "id": "peak",
+          "title": {
+            "zh": "峰谷费用",
+            "en": "Peak Cost"
+          },
+          "icon": "coin",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        }
+      ],
+      "turn.note": [
+        {
+          "id": "cost"
+        }
+      ]
+    }
+  }
+}

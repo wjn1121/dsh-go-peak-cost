@@ -29,6 +29,8 @@ The DSH Go chat UI does not show peak hours or per-turn cost, so it is hard to t
 
 This plugin fills that gap: **two amounts in the composer strip, one amount per turn, and charts in the panel.**
 
+If you are searching for "DSH Go cost per turn", "DeepSeek peak/off-peak pricing", or "today's API spend on Android", this is the plugin: two amounts in the strip, one amount per turn, and 24-hour / 7-day charts, all computed locally.
+
 ## ⚡ Quick start
 
 1. **Install** on the DSH Go phone host:
@@ -49,9 +51,11 @@ This plugin fills that gap: **two amounts in the composer strip, one amount per 
 ## ✨ Features
 
 - 💰 **Two costs, separated**: the strip and the panel both show **this chat** and **today**; one long conversation no longer hides the day's total.
-- ⏱️ **Peak / off-peak at a glance**: current period and next switch in the strip; each turn's footer carries a `Peak` / `Off` tag.
+- ⏱️ **Peak / off-peak at a glance**: the strip, panel and turn footer use color for peak/off-peak; the panel shows the next switch with a countdown (e.g. `→ 18:00 · 1h20m`).
+- 🧭 **Current model next to the rates**: no guessing which model a rate belongs to; unknown models are labelled explicitly.
 - 📊 **Cost charts**: today's 24-hour bars, this chat's per-turn bars, and a 7-day line chart, following the shape of DeepSeek's usage page (hourly for today, daily for the week, by model).
 - 🧾 **Traceable turns**: recent turns list the amount and the period; a plain-text summary can be copied from the panel.
+- 🫥 **Clear empty state**: before the first finished turn, chart captions say "No data" instead of showing a mysterious empty chart.
 - 🔁 **Automatic backfill**: sessions from before installation are recalculated from `$DSH_HOME/sessions`, so you do not start from zero.
 - 🛡️ **Local only**: zero dependencies, no network, no API keys; the ledger stores titles, models, tokens, costs and timestamps, never message content.
 - 📱 **Native slots**: composer strip, panel and turn footer in DSH Go; older apps without turn notes degrade gracefully.
@@ -73,11 +77,11 @@ The panel is ordered as "money first, trends second, reference last":
 
 | # | Section | Content |
 | --- | --- | --- |
-| 1 | Four metrics | This chat, today, current period, next switch |
+| 1 | Four metrics | This chat, today, current period, next switch (with countdown) |
 | 2 | Today, 24 hours | Cost bars for 0–23; the running turn is counted in the current hour |
 | 3 | This chat, per turn | Bars for the latest 24 turns |
 | 4 | Recent turns | Latest 6 turns with amount and peak/off-peak tag |
-| 5 | Current rates | Three rows for the current period, then the other period |
+| 5 | Current rates | Current model plus three rows for the current period, then the other period |
 | 6 | Today at a glance | Tokens, output, cache hit rate, finished turns |
 | 7 | Context | Context usage of the current chat |
 | 8 | Last 7 days | One cost point per day |
@@ -87,6 +91,19 @@ The panel is ordered as "money first, trends second, reference last":
 
 **This chat** = all finished turns in the current conversation + the running turn.
 **Today** = every conversation today (including subagents) + the running turn. Subagents are separate sessions: they count toward today / 7 days, not toward this chat.
+
+## 🆚 How it compares
+
+| Need | This plugin | Typical web / desktop cost plugins |
+| --- | --- | --- |
+| Native DSH Go UI | ✅ strip / panel / turn footer | Most are web / desktop only |
+| Separate chat and today costs | ✅ | Often only one total |
+| Today's 24-hour cost | ✅ | Some |
+| Per-turn cost for this chat | ✅ | Some |
+| 7-day / by-model view | ✅ | Most |
+| Zero dependencies, local only | ✅ | Depends |
+
+It is not the most feature-complete cost center. If you only need "how much did this chat and today cost" inside DSH Go, it has the shortest path: tap the strip and the panel opens, with no web page and no extra service.
 
 ## 💰 Pricing and peak hours
 
@@ -115,7 +132,7 @@ git clone https://github.com/wjn1121/local-peak-cost.git "$P"
 dsh plugin --profile web add "$P"
 ```
 
-Then **restart the engine**. Historical sessions are backfilled about 8 seconds after startup; give it ~10 seconds before checking the strip or panel.
+Then **restart the engine**. Historical sessions are backfilled about 3 seconds after startup; give it ~10 seconds before checking the strip or panel.
 
 ### Update
 
@@ -189,6 +206,12 @@ A: They are currently treated as weekdays, so holiday peak hours are overestimat
 **Q: Is it heavy on battery?**
 A: It only reads session events and a local ledger, with no network calls; pushes are merged into 150ms windows, the strip refreshes once a minute, and backfill runs at startup and every 30 minutes, skipping already-scanned sessions.
 
+**Q: How is this different from dsh-island-go / dsh-cost-meter?**
+A: This is a **native DSH Go** plugin: strip, panel and turn footer live in the app, with a focus on separate chat/today costs and 24-hour / per-turn charts. dsh-island-go is the upstream engine-side data chain; dsh-cost-meter is a broader web/desktop cost center.
+
+**Q: How do I find it on GitHub or in an AI answer?**
+A: Search GitHub for the repo name `local-peak-cost`, or for `dsh-go cost` / `DSH Go peak cost`. If an AI answer does not mention it yet, that usually means the repo is still new and lacks backlinks/indexing — a Star, a share, or a plugin-directory listing helps more than more README edits.
+
 **Q: Does it work in web mode / on a remote host?**
 A: It records costs, but native strips and panels only appear on the phone's local engine where the dsh-go bridge exists.
 
@@ -238,6 +261,10 @@ See [CHANGELOG.md](CHANGELOG.md).
 ## 📄 License
 
 [MIT](LICENSE). Upstream notices are in [NOTICE](NOTICE).
+
+## 📣 Help others find it
+
+If this plugin saves you time, please **Star** it, share it with DSH Go users, or submit it to a DSH plugin directory. A new repo without backlinks is hard for search engines and AI answer engines to discover; one Star or one link helps more than another round of keyword edits.
 
 ## 📞 Contact
 

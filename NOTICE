@@ -1,0 +1,12 @@
+local-peak-cost
+===============
+
+The engine-side data chain (session event folding, usage ledger and backfill
+in lib/state.js and lib/usage.js) is derived from dsh-island-go:
+
+  https://github.com/a961282799-crypto/dsh-island-go
+  Copyright (c) 2026 dsh-island contributors
+  Licensed under the MIT License.
+
+This repository adds peak/off-peak period detection, rate display,
+per-turn period tags and the panel layout on top of that base.

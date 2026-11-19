@@ -23,7 +23,7 @@ Prices are from the [official DeepSeek pricing page](https://api-docs.deepseek.c
 | `deepseek-v4-pro` | Peak | ¥0.30 | ¥9 | ¥27 |
 | `deepseek-v4-pro` | Off-peak | ¥0.15 | ¥4.5 | ¥13.5 |
 
-Peak hours: **Beijing time, Monday–Friday (excluding Chinese public holidays), 09:00–12:00 and 14:00–18:00; all other times (including weekends and holidays) are off-peak** at roughly half the peak price.
+Peak hours: **Beijing time, Monday–Friday, 09:00–12:00 and 14:00–18:00; all other times (including weekends) are off-peak** at roughly half the peak price. Chinese public holidays are currently treated as weekdays; no holiday calendar is wired in yet.
 
 To change prices, edit `TABLE` in `lib/pricing.js`, then restart the engine from the app's Engine page.
 

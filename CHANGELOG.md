@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.3 — 2026-11-20
+
+### Changed
+
+- GitHub 仓库更名为 `dsh-go-peak-cost`；插件包名、安装目录和账本路径仍是 `local-peak-cost`，已安装用户不需要迁移数据。
+- README / 徽章 / 安装与更新命令 / release 链接 / 发布文案 / 社交分享图全部改用新仓库地址；旧 GitHub 链接自动重定向。
+- `package.json` 增加 `repository` / `homepage` 元数据。
+- 插件行为与 0.2.2 相同。
+
 ## 0.2.2 — 2026-11-20
 
 ### Docs

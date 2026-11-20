@@ -18,12 +18,12 @@
 ```sh
 P="${DSH_HOME:-$HOME/.dsh}/dsh-go/plugins/local-peak-cost"
 mkdir -p "$(dirname "$P")"
-git clone https://github.com/wjn1121/local-peak-cost.git "$P"
+git clone https://github.com/wjn1121/dsh-go-peak-cost.git "$P"
 dsh plugin --profile web add "$P"
 ```
 
-仓库：https://github.com/wjn1121/local-peak-cost
-Release：https://github.com/wjn1121/local-peak-cost/releases/tag/v0.2.2
+仓库：https://github.com/wjn1121/dsh-go-peak-cost
+Release：https://github.com/wjn1121/dsh-go-peak-cost/releases/tag/v0.2.2
 
 如果对你有用，求个 Star 或转发给用 DSH Go 的朋友；有问题直接开 Issue。
 
@@ -51,7 +51,7 @@ DSH Go 的会话界面有 token，但没有「这轮/这场/今天花了多少�
 ```sh
 P="${DSH_HOME:-$HOME/.dsh}/dsh-go/plugins/local-peak-cost"
 mkdir -p "$(dirname "$P")"
-git clone https://github.com/wjn1121/local-peak-cost.git "$P"
+git clone https://github.com/wjn1121/dsh-go-peak-cost.git "$P"
 dsh plugin --profile web add "$P"
 ```
 
@@ -59,8 +59,8 @@ dsh plugin --profile web add "$P"
 
 已知限制：只在 DSH Go 手机本机引擎显示原生状态条/面板；网页版/远程主机只记账不显示。价格按 2026-11-19 官方价目，法定节假日暂按工作日估算，以 DeepSeek 账单为准。
 
-仓库：https://github.com/wjn1121/local-peak-cost
-Release：https://github.com/wjn1121/local-peak-cost/releases/tag/v0.2.2
+仓库：https://github.com/wjn1121/dsh-go-peak-cost
+Release：https://github.com/wjn1121/dsh-go-peak-cost/releases/tag/v0.2.2
 
 功能、价格、隐私和 FAQ 都写在 README；如果你也在用 DSH Go，欢迎试一下并提反馈。
 
@@ -78,12 +78,12 @@ Install on the phone host, then restart the engine:
 ```sh
 P="${DSH_HOME:-$HOME/.dsh}/dsh-go/plugins/local-peak-cost"
 mkdir -p "$(dirname "$P")"
-git clone https://github.com/wjn1121/local-peak-cost.git "$P"
+git clone https://github.com/wjn1121/dsh-go-peak-cost.git "$P"
 dsh plugin --profile web add "$P"
 ```
 
-Repo: https://github.com/wjn1121/local-peak-cost
-Release: https://github.com/wjn1121/local-peak-cost/releases/tag/v0.2.2
+Repo: https://github.com/wjn1121/dsh-go-peak-cost
+Release: https://github.com/wjn1121/dsh-go-peak-cost/releases/tag/v0.2.2
 
 If you use DSH Go, give it a try and tell me what is missing. A ⭐ helps others find it.
 

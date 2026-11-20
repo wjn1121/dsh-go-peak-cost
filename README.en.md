@@ -1,12 +1,14 @@
-# 💸 Peak Cost · local-peak-cost
+# 💸 Peak Cost · dsh-go-peak-cost
 
 > See **this chat's cost** and **today's cost** above the composer in DSH Go, together with DeepSeek's current peak/off-peak period and the cost of every turn.
 > Local estimates only: no network calls, no API keys, and no message content in the ledger.
 
+> The package / install directory is still `local-peak-cost` for compatibility; the GitHub repository is now `dsh-go-peak-cost`, and old links redirect.
+
 <p align="center">
-  <a href="https://github.com/wjn1121/local-peak-cost/releases"><img src="https://img.shields.io/github/package-json/v/wjn1121/local-peak-cost?label=version&color=orange&style=flat-square" alt="version"></a>
-  <a href="https://github.com/wjn1121/local-peak-cost/stargazers"><img src="https://img.shields.io/github/stars/wjn1121/local-peak-cost?label=stars&color=yellow&style=flat-square" alt="GitHub stars"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/wjn1121/local-peak-cost?color=green&style=flat-square" alt="MIT license"></a>
+  <a href="https://github.com/wjn1121/dsh-go-peak-cost/releases"><img src="https://img.shields.io/github/package-json/v/wjn1121/dsh-go-peak-cost?label=version&color=orange&style=flat-square" alt="version"></a>
+  <a href="https://github.com/wjn1121/dsh-go-peak-cost/stargazers"><img src="https://img.shields.io/github/stars/wjn1121/dsh-go-peak-cost?label=stars&color=yellow&style=flat-square" alt="GitHub stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/wjn1121/dsh-go-peak-cost?color=green&style=flat-square" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/DSH%20Go-%E2%89%A50.2.2-blue?style=flat-square" alt="DSH Go 0.2.2+">
   <img src="https://img.shields.io/badge/platform-DSH%20Go%20(Android)-green?style=flat-square" alt="DSH Go Android">
   <a href="https://github.com/wjn1121"><img src="https://img.shields.io/badge/author-wjn1121-lightgrey?style=flat-square" alt="author"></a>
@@ -39,7 +41,7 @@ If you are searching for "DSH Go cost per turn", "DeepSeek peak/off-peak pricing
    ```sh
    P="${DSH_HOME:-$HOME/.dsh}/dsh-go/plugins/local-peak-cost"
    mkdir -p "$(dirname "$P")"
-   git clone https://github.com/wjn1121/local-peak-cost.git "$P"
+   git clone https://github.com/wjn1121/dsh-go-peak-cost.git "$P"
    dsh plugin --profile web add "$P"
    ```
 
@@ -129,7 +131,7 @@ To change prices, edit the `TABLE` in `lib/pricing.js` and restart the engine fr
 ```sh
 P="${DSH_HOME:-$HOME/.dsh}/dsh-go/plugins/local-peak-cost"
 mkdir -p "$(dirname "$P")"
-git clone https://github.com/wjn1121/local-peak-cost.git "$P"
+git clone https://github.com/wjn1121/dsh-go-peak-cost.git "$P"
 dsh plugin --profile web add "$P"
 ```
 
@@ -138,6 +140,7 @@ Then **restart the engine**. Historical sessions are backfilled about 3 seconds 
 ### Update
 
 ```sh
+git -C "$P" remote set-url origin https://github.com/wjn1121/dsh-go-peak-cost.git
 git -C "$P" pull --ff-only
 # restart the engine from the App
 ```
@@ -272,7 +275,7 @@ Use `docs/social-preview.png` for the GitHub **Social preview** (Settings → Ge
 ## 📞 Contact
 
 - **GitHub**: [@wjn1121](https://github.com/wjn1121)
-- **Issues**: [local-peak-cost/issues](https://github.com/wjn1121/local-peak-cost/issues)
+- **Issues**: [local-peak-cost/issues](https://github.com/wjn1121/dsh-go-peak-cost/issues)
 - **QQ group**: 1038882918
 
 <p align="center">If this plugin saves you a little money, please consider a ⭐ Star!</p>

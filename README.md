@@ -1,12 +1,14 @@
-# 💸 峰谷费用 · local-peak-cost
+# 💸 峰谷费用 · dsh-go-peak-cost
 
 > 在 DSH Go 输入框上方同时看到**本会话**和**今日**花了多少钱，顺手标出 DeepSeek 现在是峰时还是谷时、每一轮花了多少。
 > 纯本地估算，不联网、不读密钥；账本里没有对话正文。
 
+> 插件包名 / 安装目录仍叫 `local-peak-cost`（兼容已安装用户）；GitHub 仓库名已改为 `dsh-go-peak-cost`，旧链接会自动重定向。
+
 <p align="center">
-  <a href="https://github.com/wjn1121/local-peak-cost/releases"><img src="https://img.shields.io/github/package-json/v/wjn1121/local-peak-cost?label=version&color=orange&style=flat-square" alt="version"></a>
-  <a href="https://github.com/wjn1121/local-peak-cost/stargazers"><img src="https://img.shields.io/github/stars/wjn1121/local-peak-cost?label=stars&color=yellow&style=flat-square" alt="GitHub stars"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/wjn1121/local-peak-cost?color=green&style=flat-square" alt="MIT license"></a>
+  <a href="https://github.com/wjn1121/dsh-go-peak-cost/releases"><img src="https://img.shields.io/github/package-json/v/wjn1121/dsh-go-peak-cost?label=version&color=orange&style=flat-square" alt="version"></a>
+  <a href="https://github.com/wjn1121/dsh-go-peak-cost/stargazers"><img src="https://img.shields.io/github/stars/wjn1121/dsh-go-peak-cost?label=stars&color=yellow&style=flat-square" alt="GitHub stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/wjn1121/dsh-go-peak-cost?color=green&style=flat-square" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/DSH%20Go-%E2%89%A50.2.2-blue?style=flat-square" alt="DSH Go 0.2.2+">
   <img src="https://img.shields.io/badge/platform-DSH%20Go%20(Android)-green?style=flat-square" alt="DSH Go Android">
   <a href="https://github.com/wjn1121"><img src="https://img.shields.io/badge/author-wjn1121-lightgrey?style=flat-square" alt="author"></a>
@@ -40,7 +42,7 @@ DSH Go 自带的会话界面不显示峰谷，也不显示单轮费用；等月�
    ```sh
    P="${DSH_HOME:-$HOME/.dsh}/dsh-go/plugins/local-peak-cost"
    mkdir -p "$(dirname "$P")"
-   git clone https://github.com/wjn1121/local-peak-cost.git "$P"
+   git clone https://github.com/wjn1121/dsh-go-peak-cost.git "$P"
    dsh plugin --profile web add "$P"
    ```
 
@@ -130,7 +132,7 @@ DSH Go 自带的会话界面不显示峰谷，也不显示单轮费用；等月�
 ```sh
 P="${DSH_HOME:-$HOME/.dsh}/dsh-go/plugins/local-peak-cost"
 mkdir -p "$(dirname "$P")"
-git clone https://github.com/wjn1121/local-peak-cost.git "$P"
+git clone https://github.com/wjn1121/dsh-go-peak-cost.git "$P"
 dsh plugin --profile web add "$P"
 ```
 
@@ -139,6 +141,7 @@ dsh plugin --profile web add "$P"
 ### 更新
 
 ```sh
+git -C "$P" remote set-url origin https://github.com/wjn1121/dsh-go-peak-cost.git
 git -C "$P" pull --ff-only
 # 然后在 App 的「引擎」页重启
 ```
@@ -292,7 +295,7 @@ local-peak-cost/
 ## 📞 联系作者
 
 - **GitHub**：[@wjn1121](https://github.com/wjn1121)
-- **问题反馈**：[Issues](https://github.com/wjn1121/local-peak-cost/issues)
+- **问题反馈**：[Issues](https://github.com/wjn1121/dsh-go-peak-cost/issues)
 - **QQ 群**：1038882918
 
 <p align="center">如果这个插件帮你少花了一点冤枉钱，请点个 ⭐ Star 支持一下～</p>

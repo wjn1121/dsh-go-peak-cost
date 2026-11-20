@@ -13,6 +13,7 @@
 </p>
 
 <p align="center"><b>简体中文</b> | <a href="README.en.md">English</a></p>
+<p align="center"><sub>已收录于 <a href="https://dshplugin.online/plugins/wjn1121--local-peak-cost">dshplugin.online</a> · <a href="https://plugin.dshdesk.com/plugins/wjn1121/local-peak-cost/">plugin.dshdesk.com</a></sub></p>
 <p align="center">
   <a href="#-快速开始">快速开始</a> ·
   <a href="#-功能特性">功能</a> ·
@@ -65,7 +66,7 @@ DSH Go 自带的会话界面不显示峰谷，也不显示单轮费用；等月�
 ## 🖼️ 界面预览
 
 <p align="center">
-  <img src="docs/preview.svg" alt="峰谷费用面板示意图：本会话与今日花费、今日 24 小时柱状图、每轮花费和当前单价" width="720">
+  <img src="docs/preview.png" alt="峰谷费用面板示意图：本会话与今日花费、今日 24 小时柱状图、每轮花费和当前单价" width="720">
 </p>
 
 <p align="center"><sub>示意图，示例数据；实际界面随 App 主题和屏幕宽度变化。</sub></p>
@@ -285,6 +286,8 @@ local-peak-cost/
 ## 📣 帮助更多人找到它
 
 如果这个插件对你有用，欢迎 **Star**、转发到 DSH Go 群 / 社区，或把它提交到 DSH 插件目录站。新仓库没有外部链接时，搜索引擎和问答 AI 很难主动发现它；你的一个 Star 或一条外链，比再改十次关键词更有用。
+
+仓库的 **Social preview** 可以用 `docs/social-preview.png`（Settings → General → Social preview 上传）；现成的群聊 / 社区 / Reddit 文案在 [docs/launch-post.md](docs/launch-post.md)。
 
 ## 📞 联系作者
 

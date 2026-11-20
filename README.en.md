@@ -13,6 +13,7 @@
 </p>
 
 <p align="center"><a href="README.md">简体中文</a> | <b>English</b></p>
+<p align="center"><sub>Listed on <a href="https://dshplugin.online/plugins/wjn1121--local-peak-cost">dshplugin.online</a> · <a href="https://plugin.dshdesk.com/plugins/wjn1121/local-peak-cost/">plugin.dshdesk.com</a></sub></p>
 <p align="center">
   <a href="#-quick-start">Quick start</a> ·
   <a href="#-features">Features</a> ·
@@ -64,7 +65,7 @@ If you are searching for "DSH Go cost per turn", "DeepSeek peak/off-peak pricing
 ## 🖼️ Screenshot
 
 <p align="center">
-  <img src="docs/preview.svg" alt="Peak Cost panel mockup: chat and today totals, 24-hour cost bars, per-turn cost and current rates" width="720">
+  <img src="docs/preview.png" alt="Peak Cost panel mockup: chat and today totals, 24-hour cost bars, per-turn cost and current rates" width="720">
 </p>
 
 <p align="center"><sub>Mockup with sample data; the real UI follows the app theme and screen width.</sub></p>
@@ -265,6 +266,8 @@ See [CHANGELOG.md](CHANGELOG.md).
 ## 📣 Help others find it
 
 If this plugin saves you time, please **Star** it, share it with DSH Go users, or submit it to a DSH plugin directory. A new repo without backlinks is hard for search engines and AI answer engines to discover; one Star or one link helps more than another round of keyword edits.
+
+Use `docs/social-preview.png` for the GitHub **Social preview** (Settings → General → Social preview); ready-to-copy posts for groups / communities / Reddit are in [docs/launch-post.md](docs/launch-post.md).
 
 ## 📞 Contact
 

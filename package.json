@@ -1,6 +1,6 @@
 {
   "name": "local-peak-cost",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "DeepSeek 峰谷价与每轮花费（DSH Go 原生）：输入框状态条、峰谷费用面板、回合尾注",
   "type": "module",
   "license": "MIT",

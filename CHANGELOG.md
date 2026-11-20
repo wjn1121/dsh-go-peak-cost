@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.2 — 2026-11-20
+
+### Docs
+
+- README 改用 `docs/preview.png` 高清示意图，并新增 `docs/social-preview.png`（1280×640，可用于 GitHub Social preview）。
+- 新增 `docs/launch-post.md`：群聊 / 社区 / Reddit 可直接复制的发布文案和目录站状态。
+- README 标注已收录的 dshplugin.online、plugin.dshdesk.com 页面。
+- 插件行为与 0.2.1 相同；本版只补齐发布素材。
+
 ## 0.2.1 — 2026-11-19
 
 ### Added
@@ -9,6 +18,7 @@
 - 面板「当前单价」旁显示当前模型，避免不知道价格属于哪个模型。
 - 没有完成轮次时，24 小时图和每轮图的说明显示「暂无数据」。
 - README 增加目标用户的搜索问法、同类插件对比、找不到时的说明，以及 Star / 分享 / 目录站收录引导；英文版同步。
+- 新增 `docs/preview.png`、`docs/social-preview.png` 和 `docs/launch-post.md`；README 改用 PNG 示意图。
 
 ### Changed
 
